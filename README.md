@@ -1,2 +1,2 @@
 Feature A+1
-Feature B
+Feature B+1
