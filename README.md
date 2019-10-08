@@ -1,4 +1,4 @@
-Feature AAA
+Feature A
 Feature B
 
-develop 1 2
+develop 1
