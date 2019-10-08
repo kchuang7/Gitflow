@@ -1,2 +1,2 @@
-Feature A+1+2+3
+Feature AAA
 Feature B+1
