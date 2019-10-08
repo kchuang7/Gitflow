@@ -1,5 +1,5 @@
-Feature A
-Feature B
-Feature C
+- Feature A
+- Feature B
+- Feature C
 
 develop
