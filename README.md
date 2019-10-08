@@ -1,4 +1,4 @@
 Feature A
 Feature BBBB
 
-develop
+setup develop
