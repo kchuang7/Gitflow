@@ -1,2 +1,2 @@
 README
-ProfileTab
+ActivityTab
