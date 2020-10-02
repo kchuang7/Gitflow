@@ -1,0 +1,22 @@
+name: Update file CI pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+    - name: Set current date as env variable
+      run: echo "::set-env name=NOW::$(date +'%Y-%m-%dT%H:%M:%S')"
+    - name: Create local changes
+      run: echo $NOW >> README.md
+    - name: Commit files
+      run: git commit -m "Update README.md" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
